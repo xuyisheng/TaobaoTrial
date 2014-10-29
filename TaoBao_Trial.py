@@ -61,7 +61,7 @@ def launch_tb_activity():  # using activity method
     d.screen.on()
     time.sleep(1)
     os.system("adb shell am force-stop com.taobao.taobao")
-    time.sleep(1)
+    time.sleep(3)
     os.system("adb shell am start -n com.taobao.taobao/com.taobao.tao.welcome.Welcome")
     time.sleep(10)
     # click Trial
@@ -91,9 +91,9 @@ def tb_coin():
 def apply_one(kind_x, kind_y):
     # apply for 4 production
     dis_x = 540
-    dis_y= 850
+    dis_y= 784.5
     base_x = 270
-    base_y = 644
+    base_y = 743.25
     d.click(kind_x, kind_y)
     time.sleep(5)
     select_product(base_x, base_y)
@@ -101,7 +101,7 @@ def apply_one(kind_x, kind_y):
     select_product(base_x, base_y + dis_y)
     select_product(base_x + dis_x, base_y + dis_y)
     #add drag down action
-    d.drag(270,1494,270,750,steps=200)
+    d.drag(270,1527.75,270,743.25,steps=200)
     select_product(base_x, base_y)
     select_product(base_x + dis_x, base_y)
     select_product(base_x, base_y + dis_y)
@@ -146,7 +146,7 @@ def test():
 
 def usage():
     print("Usage: python TaoBao_Trail.py [arg1,arg2,arg3,arg4.....]")
-    print("arg=digital,facial,electron,house,cloth,others")
+    print("arg=tech,facial,electron,house,cloth,others")
     exit()
 
 
