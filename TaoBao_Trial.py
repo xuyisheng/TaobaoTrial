@@ -90,15 +90,23 @@ def tb_coin():
 
 def apply_one(kind_x, kind_y):
     # apply for 4 production
-    dis = 600
-    base_x = 250
-    base_y = 640
+    dis_x = 540
+    dis_y= 850
+    base_x = 270
+    base_y = 644
     d.click(kind_x, kind_y)
     time.sleep(5)
     select_product(base_x, base_y)
-    select_product(base_x + dis, base_y)
-    select_product(base_x, base_y + dis)
-    select_product(base_x + dis, base_y + dis)
+    select_product(base_x + dis_x, base_y)
+    select_product(base_x, base_y + dis_y)
+    select_product(base_x + dis_x, base_y + dis_y)
+    #add drag down action
+    d.drag(270,1494,270,750,steps=200)
+    select_product(base_x, base_y)
+    select_product(base_x + dis_x, base_y)
+    select_product(base_x, base_y + dis_y)
+    select_product(base_x + dis_x, base_y + dis_y)
+
 
 def exit_tb():
     time.sleep(1)
